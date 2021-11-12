@@ -10,15 +10,28 @@ package sp4_console_michelland_peron;
  */
 public class Joueur {
         String nom;
-        String Couleur;
+        String couleur;
         int nombreDesintegrations;
         int nombreJetonsRestants ;
-public Joueur(String unModèle, String uneMarque, int laPuissanceCV) {
+        Jeton[] ListeJetons;
+public Joueur(String lenom) {
 
- modèle = unModèle; 
- marque = uneMarque;
- PuissanceCV = laPuissanceCV;
- Proprietaire = null;
+    nom = lenom; 
+    System.out.println("Quel est votre nom?");
+}
+public AffecterCouleur (String lacouleur) {
+
+    couleur = lacouleur; 
+    System.out.println(couleur);
+}
+public ajouterjeton (Jeton){
+    
+}
+public obtenirDesintegrateur(){
+    
+}
+public utiliserDesintegrateur(){
+    
 }
 }
 
