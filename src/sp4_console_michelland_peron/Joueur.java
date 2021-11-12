@@ -9,5 +9,16 @@ package sp4_console_michelland_peron;
  * @author miche
  */
 public class Joueur {
-    
+        String nom;
+        String Couleur;
+        int nombreDesintegrations;
+        int nombreJetonsRestants ;
+public Joueur(String unModèle, String uneMarque, int laPuissanceCV) {
+
+ modèle = unModèle; 
+ marque = uneMarque;
+ PuissanceCV = laPuissanceCV;
+ Proprietaire = null;
 }
+}
+
