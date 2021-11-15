@@ -31,11 +31,5 @@ public boolean ajouterjeton (int lesJetons){
         return false;
     }
 }
-public obtenirDesintegrateur(){
-    
-}
-public utiliserDesintegrateur(){
-    
-}
 }
 
