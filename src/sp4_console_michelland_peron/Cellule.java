@@ -9,5 +9,5 @@ package sp4_console_michelland_peron;
  * @author miche
  */
 public class Cellule {
-    
+     
 }
