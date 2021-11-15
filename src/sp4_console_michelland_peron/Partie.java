@@ -10,4 +10,6 @@ package sp4_console_michelland_peron;
  */
 public class Partie {
     
+    Joueur joueurCourant;
+    Grille grilleJeu;
 }
