@@ -9,12 +9,5 @@ package sp4_console_michelland_peron;
  * @author miche
  */
 public class Grille {
-    Cellule [][] cellulesjoue = new Cellule[6][7];
     
-public Grille (){
-    for (int i=0, i<6 , i++){
-        
-    }
-        
-}
 }
