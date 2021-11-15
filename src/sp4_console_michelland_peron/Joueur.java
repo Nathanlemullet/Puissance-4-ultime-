@@ -13,19 +13,23 @@ public class Joueur {
         String couleur;
         int nombreDesintegrations;
         int nombreJetonsRestants ;
-        Jeton[] ListeJetons;
+        int [] listeJetons=new int [21];
 public Joueur(String lenom) {
 
     nom = lenom; 
-    System.out.println("Quel est votre nom?");
 }
-public AffecterCouleur (String lacouleur) {
+public void AffecterCouleur (String lacouleur) {
 
     couleur = lacouleur; 
-    System.out.println(couleur);
 }
-public ajouterjeton (Jeton){
-    
+public boolean ajouterjeton (int lesJetons){
+    if (nombreJetonsRestants<21){
+        listeJetons[nombreJetonsRestants]=lesJetons;
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 public obtenirDesintegrateur(){
     
