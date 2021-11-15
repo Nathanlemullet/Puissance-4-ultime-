@@ -12,7 +12,7 @@ public class Joueur {
         String nom;
         String couleur;
         int nombreDesintegrations;
-        int nombreJetonsRestants ;
+        int nombreJetonsRestants=0 ;
         int [] listeJetons=new int [21];
 public Joueur(String lenom) {
 
@@ -23,19 +23,17 @@ public void AffecterCouleur (String lacouleur) {
     couleur = lacouleur; 
 }
 public boolean ajouterjeton (int lesJetons){
-    if (nombreJetonsRestants<21){
-        listeJetons[nombreJetonsRestants]=lesJetons;
-        return true;
+    lesJetons=nombreJetonsRestants;
+    
+    if (lesJetons<21){
+        listeJetons[lesJetons]=nombreJetonsRestants;/*on assigne un jeton dans la liste. */
+        lesJetons=lesJetons +1;/*on actualise la valeur du nombre de jetons restants. */
+        return true;   
     }
     else {
-        return false;
+        nombreJetonsRestants=21;
+        return false; /*il n'y a plus de place dans la liste de jetons pour en ajouter. */
     }
-}
-public obtenirDesintegrateur(){
-    
-}
-public utiliserDesintegrateur(){
-    
 }
 }
 

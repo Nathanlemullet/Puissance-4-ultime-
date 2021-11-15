@@ -45,7 +45,16 @@ public void viderGrille(){
 }
 
 public void afficherGrilleSurConsole(){
-    
+    int i;
+    int j;
+    for (i=0; i<7;i++){
+        for (j=0; j<6;j++){
+            if (CellulesJeu[j][i].lireCouleur=="rouge"){
+                return false;
+            }
+        }
+    }
+    return true;    
 }
 
 }
