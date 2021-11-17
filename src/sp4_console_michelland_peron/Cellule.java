@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package sp4_console_michelland_peron;
+import java.util.Random;
 
 /**
  *
@@ -10,12 +11,13 @@ package sp4_console_michelland_peron;
  */
 public class Cellule {
     Jeton jetonCourant;
-    boolean trouNoir;
+    boolean trounoir;
     boolean desintegrateur;
+    private Object[][] CellulesJeu;
 
 public Cellule(){
     jetonCourant=null;
-    trouNoir=false;
+    trounoir=false;
     desintegrateur=false;
 }
     
@@ -35,49 +37,31 @@ public String lireCouleurDuJeton (){
     else{
         return jetonCourant.couleur;
     }
-}
-/*
-public boolean supprimeJeton (){
-    jetonCourant=null;
-        return false;
-}
-
-public boolean placerTrouNoir(){
-    if (trouNoir==false){
-        trouNoir=true;
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-
-public boolean presenceTrouNoir (){
-    if (trouNoir==true){
-        return true;
-    }
-}
-
-
-*/
-}
     
-public boolean affecterJeton (Jeton jeton1){
-    if (jetonCourant==null){
-        jetonCourant=jeton1;
-        return true;
-    }
-    else {
-        return false;
-    }
+    
 }
-public String lireCouleurDuJeton (){
-    if (jetonCourant==null){
-        return "rien";
+
+public boolean placerTrousNoirs(){
+    
+    for (int i=0;i<5;i++){
+        Jeton j= new Jeton("rouge");
+        Random r = new Random(6);
+        int x = r.nextInt();
+        Random ra= new Random(7);
+        int y = ra.nextInt();
+        CellulesJeu[x][y].ajouterJetonDansColonne(j)="Noir";
     }
-    else{
-        return jetonCourant.couleur;
-    }
+   Jeton j= new Jeton("rouge");
+        String c=j.lireCouleur();
+        System.out.println(c);
+        
+        Cellule cell= new Cellule();
+        c=cell.lireCouleurDuJeton();
+        System.out.println(c);
+        boolean d=cell.affecterJeton(j);
+        System.out.println(d);
+
+   
 }
 /*
 public boolean supprimeJeton (){

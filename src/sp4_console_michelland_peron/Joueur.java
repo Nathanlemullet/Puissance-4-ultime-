@@ -43,6 +43,4 @@ public boolean ajouterjeton (Jeton J){
         return false; /*il n'y a plus de place dans la liste de jetons pour en ajouter. */
     }
 }
-}
-
-    else {       
+    

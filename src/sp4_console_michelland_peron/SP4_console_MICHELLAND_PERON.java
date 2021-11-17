@@ -19,6 +19,13 @@ public class SP4_console_MICHELLAND_PERON {
         String c=j.lireCouleur();
         System.out.println(c);
         
+        Cellule cell= new Cellule();
+        c=cell.lireCouleurDuJeton();
+        System.out.println(c);
+        boolean d=cell.affecterJeton(j);
+        System.out.println(d);
+
+
     }
     
 }
