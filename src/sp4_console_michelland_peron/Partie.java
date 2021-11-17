@@ -9,5 +9,16 @@ package sp4_console_michelland_peron;
  * @author miche
  */
 public class Partie {
+    int [] ListeJoueurs=new int[2];
+    Joueur joueurCourant;
+    Grille grilleJeu;
+public void initialiserPartie (){
     
+}
+public void debuterPartie(){
+    
+}
+public void attribuerCouleursAuxJoueurs(Joueur J1, Joueur J2){
+    ListeJoueurs[couleurs]=J1.couleur;
+}
 }
