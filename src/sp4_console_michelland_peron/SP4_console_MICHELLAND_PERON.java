@@ -11,10 +11,14 @@ package sp4_console_michelland_peron;
 public class SP4_console_MICHELLAND_PERON {
 
     /**
-     * @param args the command line arguments
+     * Jeton
      */
     public static void main(String[] args) {
         // TODO code application logic here 
+        Jeton j= new Jeton("rouge");
+        String c=j.lireCouleur();
+        System.out.println(c);
+        
     }
     
 }

@@ -15,8 +15,9 @@ public Jeton (String lacouleur){
     couleur= lacouleur;
 
 }
-public void lireCouleur (){
+public lireCouleur (){
     System.out.print("la couleur est : "+couleur);
+    return couleur;
 }
 
 
