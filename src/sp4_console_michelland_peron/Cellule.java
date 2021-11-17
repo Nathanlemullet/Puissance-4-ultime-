@@ -28,6 +28,14 @@ public boolean affecterJeton (Jeton jeton1){
         return false;
     }
 }
+public String lireCouleurDuJeton (){
+    if (jetonCourant==null){
+        return "rien";
+    }
+    else{
+        return jetonCourant.couleur;
+    }
+}
 /*
 public boolean supprimeJeton (){
     jetonCourant=null;
@@ -50,13 +58,6 @@ public boolean presenceTrouNoir (){
     }
 }
 
-public String lireCouleurDuJeton (){
-    if (jetonCourant==null){
-        return "rien";
-    }
-    else{
-        return jetonCourant.couleur;
-    }
-}
-*/w
+
+*/
 }
