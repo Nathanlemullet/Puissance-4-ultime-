@@ -56,3 +56,10 @@ public void debuterPartie() {
 }
         
 }
+public void debuterPartie(){
+    
+}
+public void attribuerCouleursAuxJoueurs(Joueur J1, Joueur J2){
+    ListeJoueurs[couleurs]=J1.couleur;
+}
+}

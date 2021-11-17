@@ -11,6 +11,13 @@ package sp4_console_michelland_peron;
 public class Grille {
     Cellule [][] CellulesJeu = new Cellule [6][7];
 
+public void Grille (){
+    for (int i=0; i<6;i++){
+        for (int j=0;j<7;j++){
+            CellulesJeu[i][j]= new Cellule();
+        }
+    }
+}
 
 public boolean ajouterJetonDansColonne(Jeton Jeton, int nC){
     int i;
@@ -43,9 +50,9 @@ public void viderGrille(){
 public void afficherGrilleSurConsole(){
     int i;
     int j;
-    for (i=0; i<7;i++){
-        for (j=0; j<6;j++){
-            if (CellulesJeu[j][i].lireCouleurDuJeton()=="rouge"){
+    for (i=6; i>0;i--){
+        for (j=7; j>0;j--){
+            if (CellulesJeu[i][j].lireCouleurDuJeton()=="rouge"){
                 System.out.println("\033[31m O");
             }
             else {
@@ -61,7 +68,7 @@ public String lireCouleurDuJeton(int nL,int nC ){
 }
 
 public boolean celluleOccupee(int nL,int nC){
-    if (CellulesJeu[nC][nL]!=null){
+    if (CellulesJeu[nC][nL].jetonCourant!=null){
         return true;
     }
     return false;
@@ -106,13 +113,22 @@ public boolean etreGagnantePourJoueur(Joueur Joueur1){
     }
     return false;
 }
+
+public boolean colonneRemplie(int j){
+    for (int i=0; i<6;i++){
+        if (CellulesJeu[i][j].jetonCourant==null){
+            return false;
+        }
+    }
+    return true;
+}
+
 }
 
 /*
 public void tasserGrille(int){
 }
-public boolean colonneRemplie(int){
-}
+
 public boolean placerDesintegrateur(int,int){
 }
 public boolean placerTrouNoir(int,int){
